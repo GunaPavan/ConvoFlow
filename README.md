@@ -130,7 +130,7 @@ ConvoFlow\
 │  │  ├─ sentiment.py
 │  │  ├─ tts.py
 │  │  ├─ conversation_chain.py
-│  │  └─ stt.py
+│  │  
 │  ├─ frontend\
 │  │  └─ app.py
 │  └─ tests\
