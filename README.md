@@ -138,6 +138,8 @@ ConvoFlow\
 │     ├─ test_webhook_call.py
 │     └─ test_webhook.py
 ├─ .env
+├─ LICENSE
+├─ pyproject.toml
 ├─ requirements.txt
 └─ README.md
 ```
