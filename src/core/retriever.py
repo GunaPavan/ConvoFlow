@@ -52,13 +52,16 @@ class MemoryDB:
             embedding_function=self.langchain_embeddings  # pass object, not method
         )
 
-        # Webhook URL
-        self.n8n_webhook_url = n8n_webhook_url or os.getenv(
-            "N8N_WEBHOOK_URL", "http://localhost:5678/webhook-test/bd2bb1e8-036d-42e6-8f5d-2a7eb16531c1"
-        )
+        # Webhook URL from environment only
+        self.n8n_webhook_url = os.getenv("N8N_WEBHOOK_URL")
+        if not self.n8n_webhook_url:
+            raise RuntimeError(
+                "N8N_WEBHOOK_URL not set! Please add it to your .env file."
+            )
 
         # Sentiment triggers
         self.trigger_sentiments = {"negative", "very negative"}
+
 
     def save_conversation(self, user_text: str, ai_text: str, sentiment_label: str, score: float):
         """Save conversation to ChromaDB and LangChain vectorstore, trigger webhook if needed."""

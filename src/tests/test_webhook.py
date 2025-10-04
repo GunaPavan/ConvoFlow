@@ -2,13 +2,14 @@
 import pytest
 import asyncio
 from unittest.mock import patch, AsyncMock
-from src.core.retriever import MemoryDB
+from core.retriever import MemoryDB
 
 @pytest.fixture
 def memory_db():
-    """Initialize a temporary MemoryDB for testing."""
-    db = MemoryDB()
-    yield db
+    """Initialize a temporary MemoryDB for testing with mocked N8N_WEBHOOK_URL."""
+    with patch.dict("os.environ", {"N8N_WEBHOOK_URL": "http://localhost:5678/webhook-test/mock"}):
+        db = MemoryDB()
+        yield db
 
 @pytest.mark.asyncio
 async def test_negative_webhook(memory_db):

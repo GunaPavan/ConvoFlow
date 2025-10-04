@@ -1,9 +1,9 @@
 # src/api/routes/respond.py
 from fastapi import APIRouter, Form
-from src.core.sentiment import SentimentAnalyzer
-from src.core.retriever import MemoryDB
-from src.core.conversation_chain import ConvoFlowChain
-from src.api.utils.helpers import logger
+from core.sentiment import SentimentAnalyzer
+from core.retriever import MemoryDB
+from core.conversation_chain import ConvoFlowChain
+from api.utils.helpers import logger
 
 router = APIRouter()
 

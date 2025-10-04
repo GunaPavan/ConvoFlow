@@ -1,6 +1,6 @@
 import streamlit as st
 import requests
-from src.core.tts import speak
+from core.tts import speak
 from datetime import datetime
 import base64
 import os

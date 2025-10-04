@@ -1,8 +1,8 @@
 # src/core/conversation_chain.py
 from langchain.chains import ConversationalRetrievalChain
 from langchain.prompts import PromptTemplate
-from src.core.retriever import MemoryDB
-from src.core.langchain_llm import GeminiLangChainLLM
+from core.retriever import MemoryDB
+from core.langchain_llm import GeminiLangChainLLM
 
 class ConvoFlowChain:
     def __init__(self):

@@ -1,6 +1,6 @@
 # src/core/langchain_llm.py
 from langchain.llms.base import LLM as BaseLLM
-from src.core.llm import LLM
+from core.llm import LLM
 from pydantic import PrivateAttr
 
 class GeminiLangChainLLM(BaseLLM):

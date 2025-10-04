@@ -1,0 +1,36 @@
+# Core LangChain
+langchain==0.3.27
+langchain-community==0.3.30
+langchain-core==0.3.78
+chromadb==1.1.0
+langchain-chroma==0.2.6
+
+# AI/ML
+transformers==4.57.0
+sentence-transformers==5.1.1
+torch==2.8.0
+accelerate==1.10.1
+
+# Google AI (for Gemini)
+google-genai==1.41.0
+
+# Text-to-Speech & Audio
+gtts==2.5.4
+pydub==0.25.1
+speechrecognition==3.14.3
+pyttsx3==2.99
+
+# Web Framework
+fastapi==0.118.0
+uvicorn[standard]==0.37.0
+streamlit==1.50.0
+python-multipart==0.0.20
+
+# Utilities
+python-dotenv==1.1.1
+requests==2.32.5
+pypdf2==3.0.1
+
+# Testing
+pytest==8.4.2
+pytest-asyncio==1.2.0

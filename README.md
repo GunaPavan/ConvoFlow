@@ -51,7 +51,7 @@ Frontend (Streamlit)
 ### 1. Clone repository
 
 ```cmd
-git clone https://github.com/yourusername/ConvoFlow.git
+git clone https://github.com/GunaPavan/ConvoFlow.git
 cd ConvoFlow
 ```
 
@@ -61,6 +61,7 @@ cd ConvoFlow
 python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
+pip install -e .
 ```
 
 ### 3. Set environment variables
